@@ -1,72 +1,63 @@
-
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    font-family: Arial, sans-serif;
 }
 
 header {
-  background-color: #222;
-  color: white;
-  text-align: center;
-  padding: 20px 0;
+    background-color: #1c1c1c;
+    color: white;
+    padding: 20px 0;
 }
 
-section {
-  padding: 20px;
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-footer {
-  background-color: #222;
-  color: white;
-  text-align: center;
-  padding: 10px 0;
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
 }
 
-.logo-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-.round-logo {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid #000;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  background-color: #fff;
+.hero {
+    background-color: #f7f7f7;
+    padding: 60px 20px;
+    text-align: center;
 }
 
-.social-buttons {
-  margin-top: 15px;
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
+.hero h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 20px;
 }
 
 .btn {
-  text-decoration: none;
-  padding: 10px 20px;
-  border-radius: 6px;
-  font-weight: bold;
-  color: white;
-  transition: background 0.3s ease;
+    background-color: #007bff;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 5px;
 }
 
-.whatsapp {
-  background-color: #25D366;
-}
-
-.whatsapp:hover {
-  background-color: #1ebc59;
-}
-
-.instagram {
-  background-color: #E1306C;
-}
-
-.instagram:hover {
-  background-color: #c6285e;
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 40px;
 }
