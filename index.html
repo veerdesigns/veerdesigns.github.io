@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DigitalPro - Modern Digital Marketing Agency</title>
+    <title>SARDA INFOTECH - Empowering Digital Growth</title>
     <style>
         * {
             margin: 0;
@@ -12,342 +12,419 @@
         }
 
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: #333;
-            overflow-x: hidden;
+            scroll-behavior: smooth;
         }
 
-        /* Navigation */
-        .navbar {
+        /* Header */
+        .header {
             position: fixed;
             top: 0;
-            width: 100%;
-            background: rgba(0, 0, 0, 0.9);
+            left: 0;
+            right: 0;
+            background: rgba(25, 47, 89, 0.95);
             backdrop-filter: blur(10px);
             z-index: 1000;
+            padding: 1rem 0;
             transition: all 0.3s ease;
         }
 
         .nav-container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            height: 70px;
+            padding: 0 2rem;
         }
 
         .logo {
-            font-size: 28px;
+            color: white;
+            font-size: 1.8rem;
             font-weight: bold;
-            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            text-decoration: none;
         }
 
-        .nav-links {
+        .nav-menu {
             display: flex;
             list-style: none;
-            gap: 30px;
+            gap: 2rem;
         }
 
-        .nav-links a {
+        .nav-menu a {
             color: white;
             text-decoration: none;
-            transition: all 0.3s ease;
-            position: relative;
+            font-weight: 500;
+            transition: color 0.3s ease;
         }
 
-        .nav-links a:hover {
-            color: #4ecdc4;
-            transform: translateY(-2px);
+        .nav-menu a:hover {
+            color: #4a90e2;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
         }
 
         /* Hero Section */
         .hero {
-            height: 100vh;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #192f59 0%, #4a90e2 100%);
+            color: white;
+            min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
-            color: white;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="white" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="white" opacity="0.1"/><circle cx="50" cy="10" r="1" fill="white" opacity="0.05"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            padding: 0 2rem;
         }
 
         .hero-content {
-            position: relative;
-            z-index: 1;
             max-width: 800px;
             animation: fadeInUp 1s ease;
         }
 
         .hero h1 {
-            font-size: 4rem;
-            margin-bottom: 20px;
-            animation: slideInLeft 1s ease;
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
         }
 
         .hero p {
-            font-size: 1.5rem;
-            margin-bottom: 30px;
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
             opacity: 0.9;
-            animation: slideInRight 1s ease 0.3s both;
         }
 
-        .cta-button {
-            display: inline-block;
-            padding: 15px 40px;
-            background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
-            color: white;
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
             text-decoration: none;
-            border-radius: 50px;
-            font-weight: bold;
+            display: inline-block;
             transition: all 0.3s ease;
-            animation: fadeInUp 1s ease 0.6s both;
-            box-shadow: 0 10px 30px rgba(255, 107, 107, 0.3);
         }
 
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(255, 107, 107, 0.4);
+        .btn-primary {
+            background: white;
+            color: #192f59;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
 
         /* Sections */
         .section {
-            padding: 100px 0;
+            padding: 5rem 0;
+        }
+
+        .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding-left: 20px;
-            padding-right: 20px;
+            padding: 0 2rem;
         }
 
         .section-title {
             text-align: center;
-            font-size: 3rem;
-            margin-bottom: 60px;
-            background: linear-gradient(45deg, #667eea, #764ba2);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            font-size: 2.5rem;
+            color: #192f59;
+            margin-bottom: 3rem;
+        }
+
+        /* About Section */
+        .about {
+            background: #f8f9fa;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            margin-bottom: 4rem;
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .mission-vision {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .mission, .vision {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .mission h3, .vision h3 {
+            color: #192f59;
+            margin-bottom: 1rem;
+        }
+
+        .team {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .team-member {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .team-member img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: #e9ecef;
+            margin-bottom: 1rem;
         }
 
         /* Services Section */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-            margin-top: 60px;
+            gap: 2rem;
         }
 
         .service-card {
             background: white;
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .service-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
         }
 
         .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+            transform: translateY(-5px);
         }
 
         .service-icon {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 20px;
-            font-size: 24px;
-            color: white;
+            font-size: 3rem;
+            color: #4a90e2;
+            margin-bottom: 1rem;
         }
 
         .service-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-            color: #333;
+            color: #192f59;
+            margin-bottom: 1rem;
         }
 
         .service-card p {
             color: #666;
-            line-height: 1.8;
+            margin-bottom: 1.5rem;
         }
 
-        /* About Section */
-        .about {
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        .btn-outline {
+            background: transparent;
+            color: #4a90e2;
+            border: 2px solid #4a90e2;
         }
 
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-        }
-
-        .about-text {
-            font-size: 1.2rem;
-            line-height: 1.8;
-            color: #555;
-        }
-
-        .about-image {
-            background: linear-gradient(45deg, #667eea, #764ba2);
-            height: 400px;
-            border-radius: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        .btn-outline:hover {
+            background: #4a90e2;
             color: white;
-            font-size: 2rem;
-        }
-
-        /* Portfolio Section */
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-top: 60px;
-        }
-
-        .portfolio-item {
-            height: 300px;
-            border-radius: 20px;
-            position: relative;
-            overflow: hidden;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .portfolio-item:nth-child(1) {
-            background: linear-gradient(45deg, #ff9a9e, #fecfef);
-        }
-
-        .portfolio-item:nth-child(2) {
-            background: linear-gradient(45deg, #a8edea, #fed6e3);
-        }
-
-        .portfolio-item:nth-child(3) {
-            background: linear-gradient(45deg, #d299c2, #fef9d7);
-        }
-
-        .portfolio-item:nth-child(4) {
-            background: linear-gradient(45deg, #89f7fe, #66a6ff);
-        }
-
-        .portfolio-item:hover {
-            transform: scale(1.05);
-        }
-
-        .portfolio-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.7);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            transition: all 0.3s ease;
-        }
-
-        .portfolio-item:hover .portfolio-overlay {
-            opacity: 1;
-        }
-
-        .portfolio-overlay h4 {
-            color: white;
-            font-size: 1.5rem;
         }
 
         /* Contact Section */
         .contact {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
+            background: #f8f9fa;
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
         }
 
         .contact-form {
-            max-width: 600px;
-            margin: 0 auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
 
         .form-group {
-            margin-bottom: 30px;
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #333;
+            font-weight: 500;
         }
 
         .form-group input,
         .form-group textarea {
             width: 100%;
-            padding: 15px;
-            border: none;
+            padding: 0.75rem;
+            border: 2px solid #e9ecef;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #4a90e2;
+        }
+
+        .contact-info {
+            padding: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            gap: 1rem;
+        }
+
+        .contact-icon {
+            font-size: 1.5rem;
+            color: #4a90e2;
+        }
+
+        .map-placeholder {
+            background: #e9ecef;
+            height: 200px;
             border-radius: 10px;
-            font-size: 1rem;
-            background: rgba(255, 255, 255, 0.1);
-            color: white;
-            backdrop-filter: blur(10px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            margin: 2rem 0;
         }
 
-        .form-group input::placeholder,
-        .form-group textarea::placeholder {
-            color: rgba(255, 255, 255, 0.7);
-        }
-
-        .submit-btn {
-            background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+        .whatsapp-btn {
+            background: #25d366;
             color: white;
-            padding: 15px 40px;
-            border: none;
+            padding: 1rem 2rem;
             border-radius: 50px;
-            font-size: 1rem;
-            font-weight: bold;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            width: 100%;
-        }
-
-        .submit-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(255, 107, 107, 0.3);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 1rem;
         }
 
         /* Footer */
         .footer {
-            background: #1a1a1a;
+            background: #192f59;
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section ul li a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section ul li a:hover {
+            color: white;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-icon {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: #4a90e2;
             color: white;
             text-align: center;
-            padding: 40px 0;
+            line-height: 40px;
+            border-radius: 50%;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+
+        .social-icon:hover {
+            background: white;
+            color: #192f59;
+        }
+
+        .newsletter-signup {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .newsletter-signup input {
+            flex: 1;
+            padding: 0.5rem;
+            border: none;
+            border-radius: 3px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #4a90e2;
+            padding-top: 1rem;
+            text-align: center;
+            color: #ccc;
         }
 
         /* Animations */
@@ -362,292 +439,388 @@
             }
         }
 
-        @keyframes slideInLeft {
-            from {
-                opacity: 0;
-                transform: translateX(-50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        @keyframes slideInRight {
-            from {
-                opacity: 0;
-                transform: translateX(50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        /* Mobile Responsive */
+        /* Responsive Design */
         @media (max-width: 768px) {
-            .nav-links {
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .nav-menu {
                 display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: #192f59;
+                flex-direction: column;
+                padding: 1rem;
+                gap: 1rem;
+            }
+
+            .nav-menu.active {
+                display: flex;
             }
 
             .hero h1 {
                 font-size: 2.5rem;
             }
 
-            .hero p {
-                font-size: 1.2rem;
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .mission-vision {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .newsletter-signup {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2rem;
             }
 
             .section-title {
                 font-size: 2rem;
             }
 
-            .about-content {
-                grid-template-columns: 1fr;
+            .container {
+                padding: 0 1rem;
             }
-
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        /* Page Navigation */
-        .page {
-            display: none;
-        }
-
-        .page.active {
-            display: block;
         }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
+    <!-- Header -->
+    <header class="header">
         <div class="nav-container">
-            <div class="logo">DigitalPro</div>
-            <ul class="nav-links">
-                <li><a href="#" onclick="showPage('home')">Home</a></li>
-                <li><a href="#" onclick="showPage('services')">Services</a></li>
-                <li><a href="#" onclick="showPage('about')">About</a></li>
-                <li><a href="#" onclick="showPage('portfolio')">Portfolio</a></li>
-                <li><a href="#" onclick="showPage('contact')">Contact</a></li>
-            </ul>
+            <a href="#home" class="logo">SARDA INFOTECH</a>
+            <nav>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+            </nav>
         </div>
-    </nav>
+    </header>
 
-    <!-- Home Page -->
-    <div id="home" class="page active">
-        <!-- Hero Section -->
-        <section class="hero">
-            <div class="hero-content">
-                <h1>Digital Marketing Redefined</h1>
-                <p>Transform your business with cutting-edge digital strategies that drive real results</p>
-                <a href="#" class="cta-button" onclick="showPage('services')">Explore Our Services</a>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Empowering Digital Growth with Precision & Creativity</h1>
+            <p>Your Vision, Our Innovation — Let's Build It Together.</p>
+            <div class="cta-buttons">
+                <a href="#services" class="btn btn-primary">Explore Our Services</a>
+                <a href="#contact" class="btn btn-secondary">Get in Touch</a>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Quick Services Preview -->
-        <section class="section">
-            <h2 class="section-title">What We Do Best</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">📱</div>
-                    <h3>Social Media Marketing</h3>
-                    <p>Build your brand presence across all social platforms with engaging content and strategic campaigns.</p>
+    <!-- About Section -->
+    <section id="about" class="section about">
+        <div class="container">
+            <h2 class="section-title">About Us</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p><strong>SARDA INFOTECH</strong> was founded with a vision to help businesses of all sizes succeed in the digital age. Our team of designers, marketers, developers, and storytellers work together to deliver world-class digital services. Whether it's crafting a modern website, boosting social presence, or editing engaging videos — we're your one-stop digital partner.</p>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">🚀</div>
-                    <h3>SEO Optimization</h3>
-                    <p>Boost your search rankings and organic traffic with our proven SEO strategies.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">💡</div>
-                    <h3>Content Creation</h3>
-                    <p>Compelling content that resonates with your audience and drives engagement.</p>
+                <div class="about-image">
+                    <div style="background: #e9ecef; height: 300px; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: #666;">
+                        Company Image Placeholder
+                    </div>
                 </div>
             </div>
-        </section>
-    </div>
+            
+            <div class="mission-vision">
+                <div class="mission">
+                    <h3>Our Mission</h3>
+                    <p>To provide creative, affordable, and impactful digital solutions that help businesses thrive in the digital landscape.</p>
+                </div>
+                <div class="vision">
+                    <h3>Our Vision</h3>
+                    <p>To become a trusted digital ally for brands globally, delivering excellence in every project we undertake.</p>
+                </div>
+            </div>
 
-    <!-- Services Page -->
-    <div id="services" class="page">
-        <section class="section" style="margin-top: 100px;">
+            <div class="team">
+                <div class="team-member">
+                    <img alt="Team Member" style="background: #e9ecef;">
+                    <h4>Rajesh Sarda</h4>
+                    <p>Founder & CEO</p>
+                </div>
+                <div class="team-member">
+                    <img alt="Team Member" style="background: #e9ecef;">
+                    <h4>Priya Sharma</h4>
+                    <p>Creative Director</p>
+                </div>
+                <div class="team-member">
+                    <img alt="Team Member" style="background: #e9ecef;">
+                    <h4>Amit Kumar</h4>
+                    <p>Technical Lead</p>
+                </div>
+                <div class="team-member">
+                    <img alt="Team Member" style="background: #e9ecef;">
+                    <h4>Neha Gupta</h4>
+                    <p>Marketing Manager</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section">
+        <div class="container">
             <h2 class="section-title">Our Services</h2>
             <div class="services-grid">
                 <div class="service-card">
+                    <div class="service-icon">🌐</div>
+                    <h3>Web Design & Development</h3>
+                    <p>Custom, responsive websites that captivate your audience and drive conversions. From concept to launch, we create digital experiences that work.</p>
+                    <a href="#" class="btn btn-outline">Learn More</a>
+                </div>
+                
+                <div class="service-card">
                     <div class="service-icon">📱</div>
                     <h3>Social Media Marketing</h3>
-                    <p>Complete social media management including content creation, posting schedules, community management, and paid advertising campaigns across Facebook, Instagram, Twitter, LinkedIn, and TikTok.</p>
+                    <p>Build your brand presence across all social platforms. Strategic content creation, community management, and targeted advertising campaigns.</p>
+                    <a href="#" class="btn btn-outline">Learn More</a>
                 </div>
+                
                 <div class="service-card">
-                    <div class="service-icon">🚀</div>
-                    <h3>Search Engine Optimization</h3>
-                    <p>Comprehensive SEO services including keyword research, on-page optimization, technical SEO, link building, and local SEO to improve your search engine rankings.</p>
+                    <div class="service-icon">🎨</div>
+                    <h3>Graphic Design</h3>
+                    <p>Eye-catching visuals that tell your brand story. Logo design, marketing materials, and brand identity that makes lasting impressions.</p>
+                    <a href="#" class="btn btn-outline">Learn More</a>
                 </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">🔍</div>
+                    <h3>Search Engine Optimization (SEO)</h3>
+                    <p>Boost your online visibility and organic traffic. Technical SEO, content optimization, and local search strategies that deliver results.</p>
+                    <a href="#" class="btn btn-outline">Learn More</a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">💰</div>
+                    <h3>Pay-Per-Click (PPC) Advertising</h3>
+                    <p>Maximize your ROI with targeted advertising campaigns. Google Ads, Facebook Ads, and strategic budget optimization for better conversions.</p>
+                    <a href="#" class="btn btn-outline">Learn More</a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">📝</div>
+                    <h3>Content Marketing</h3>
+                    <p>Engaging content that drives action. Blog posts, articles, and multimedia content strategies that connect with your target audience.</p>
+                    <a href="#" class="btn btn-outline">Learn More</a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">🎬</div>
+                    <h3>Video Editing & Animation</h3>
+                    <p>Professional video content that captures attention. From promotional videos to animated explainers, we bring your ideas to life.</p>
+                    <a href="#" class="btn btn-outline">Learn More</a>
+                </div>
+                
                 <div class="service-card">
                     <div class="service-icon">💡</div>
-                    <h3>Content Marketing</h3>
-                    <p>Strategic content creation including blog posts, articles, infographics, videos, and email newsletters designed to engage your audience and drive conversions.</p>
+                    <h3>Brand Strategy & Consultation</h3>
+                    <p>Strategic guidance for your digital transformation. Brand positioning, market analysis, and comprehensive digital strategies for growth.</p>
+                    <a href="#" class="btn btn-outline">Learn More</a>
                 </div>
+                
                 <div class="service-card">
-                    <div class="service-icon">📊</div>
-                    <h3>PPC Advertising</h3>
-                    <p>Google Ads, Facebook Ads, and other paid advertising campaigns with detailed targeting, A/B testing, and performance optimization to maximize your ROI.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">📈</div>
-                    <h3>Analytics & Reporting</h3>
-                    <p>Comprehensive analytics setup, tracking, and monthly reports to measure campaign performance and identify opportunities for improvement.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🎯</div>
-                    <h3>Brand Strategy</h3>
-                    <p>Complete brand development including positioning, messaging, visual identity, and digital brand guidelines to create a consistent brand experience.</p>
+                    <div class="service-icon">📧</div>
+                    <h3>Email Marketing</h3>
+                    <p>Personalized email campaigns that convert. Automated sequences, newsletter design, and performance tracking for maximum engagement.</p>
+                    <a href="#" class="btn btn-outline">Learn More</a>
                 </div>
             </div>
-        </section>
-    </div>
+        </div>
+    </section>
 
-    <!-- About Page -->
-    <div id="about" class="page">
-        <section class="about section" style="margin-top: 100px;">
-            <h2 class="section-title">About DigitalPro</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>We are a modern digital marketing agency passionate about helping businesses thrive in the digital landscape. With over 5 years of experience and a team of certified digital marketing experts, we've helped hundreds of clients achieve their online goals.</p>
-                    <br>
-                    <p>Our approach combines data-driven strategies with creative execution to deliver measurable results. We believe in transparency, continuous optimization, and building long-term partnerships with our clients.</p>
-                    <br>
-                    <p>From startups to enterprise companies, we tailor our services to meet your specific needs and budget, ensuring maximum return on your marketing investment.</p>
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="contact-content">
+                <div class="contact-form">
+                    <h3>Get in Touch</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
                 </div>
-                <div class="about-image">
-                    <span>🎯 Your Success Story Starts Here</span>
+                
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    
+                    <div class="contact-item">
+                        <span class="contact-icon">📍</span>
+                        <div>
+                            <strong>Office Address</strong><br>
+                            123 Business District, Tech Park<br>
+                            Jaipur, Rajasthan 302001
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <span class="contact-icon">📞</span>
+                        <div>
+                            <strong>Phone</strong><br>
+                            +91 98765 43210
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <span class="contact-icon">📧</span>
+                        <div>
+                            <strong>Email</strong><br>
+                            info@sardainfotech.com
+                        </div>
+                    </div>
+                    
+                    <a href="https://wa.me/919876543210" class="whatsapp-btn" target="_blank">
+                        💬 WhatsApp Us
+                    </a>
+                    
+                    <div class="map-placeholder">
+                        📍 Google Maps Integration Placeholder
+                    </div>
                 </div>
             </div>
-        </section>
-    </div>
-
-    <!-- Portfolio Page -->
-    <div id="portfolio" class="page">
-        <section class="section" style="margin-top: 100px;">
-            <h2 class="section-title">Our Portfolio</h2>
-            <div class="portfolio-grid">
-                <div class="portfolio-item">
-                    <div class="portfolio-overlay">
-                        <h4>E-commerce Growth</h4>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="portfolio-overlay">
-                        <h4>SaaS Lead Generation</h4>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="portfolio-overlay">
-                        <h4>Restaurant Chain Campaign</h4>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="portfolio-overlay">
-                        <h4>Healthcare Digital Presence</h4>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-
-    <!-- Contact Page -->
-    <div id="contact" class="page">
-        <section class="contact section" style="margin-top: 100px;">
-            <h2 class="section-title">Get In Touch</h2>
-            <form class="contact-form" onsubmit="handleSubmit(event)">
-                <div class="form-group">
-                    <input type="text" placeholder="Your Name" required>
-                </div>
-                <div class="form-group">
-                    <input type="email" placeholder="Your Email" required>
-                </div>
-                <div class="form-group">
-                    <input type="text" placeholder="Your Business Name">
-                </div>
-                <div class="form-group">
-                    <textarea rows="5" placeholder="Tell us about your project" required></textarea>
-                </div>
-                <button type="submit" class="submit-btn">Send Message</button>
-            </form>
-        </section>
-    </div>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <p>&copy; 2025 DigitalPro. All rights reserved. | Email: info@digitalpro.com | Phone: +91-XXXX-XXXX</p>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>SARDA INFOTECH</h3>
+                    <p>Your Vision, Our Innovation — Let's Build It Together.</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon">f</a>
+                        <a href="#" class="social-icon">📷</a>
+                        <a href="#" class="social-icon">💼</a>
+                        <a href="#" class="social-icon">📺</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#">Web Development</a></li>
+                        <li><a href="#">Digital Marketing</a></li>
+                        <li><a href="#">Graphic Design</a></li>
+                        <li><a href="#">SEO Services</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to get updates on our latest offers and services.</p>
+                    <div class="newsletter-signup">
+                        <input type="email" placeholder="Enter your email">
+                        <button class="btn btn-primary">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 SARDA INFOTECH. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
 
     <script>
-        // Page Navigation
-        function showPage(pageId) {
-            // Hide all pages
-            const pages = document.querySelectorAll('.page');
-            pages.forEach(page => {
-                page.classList.remove('active');
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navMenu = document.getElementById('navMenu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+                // Close mobile menu if open
+                navMenu.classList.remove('active');
             });
-            
-            // Show selected page
-            document.getElementById(pageId).classList.add('active');
-            
-            // Scroll to top
-            window.scrollTo(0, 0);
-            
-            // Update active nav link
-            const navLinks = document.querySelectorAll('.nav-links a');
-            navLinks.forEach(link => {
-                link.style.color = 'white';
-            });
-            event.target.style.color = '#4ecdc4';
-        }
+        });
+
+        // Header background on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(25, 47, 89, 0.98)';
+            } else {
+                header.style.background = 'rgba(25, 47, 89, 0.95)';
+            }
+        });
 
         // Form submission
-        function handleSubmit(event) {
-            event.preventDefault();
+        document.querySelector('form').addEventListener('submit', (e) => {
+            e.preventDefault();
             alert('Thank you for your message! We will get back to you soon.');
-            event.target.reset();
-        }
+        });
 
-        // Smooth scrolling for CTA button
-        document.addEventListener('DOMContentLoaded', function() {
-            // Add scroll effect to navbar
-            window.addEventListener('scroll', function() {
-                const navbar = document.querySelector('.navbar');
-                if (window.scrollY > 50) {
-                    navbar.style.background = 'rgba(0, 0, 0, 0.95)';
-                } else {
-                    navbar.style.background = 'rgba(0, 0, 0, 0.9)';
-                }
-            });
-
-            // Add animation on scroll
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            };
-
-            const observer = new IntersectionObserver(function(entries) {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0)';
-                    }
-                });
-            }, observerOptions);
-
-            // Observe service cards
-            document.querySelectorAll('.service-card').forEach(card => {
-                card.style.opacity = '0';
-                card.style.transform = 'translateY(30px)';
-                card.style.transition = 'all 0.6s ease';
-                observer.observe(card);
-            });
+        // Newsletter subscription
+        document.querySelector('.newsletter-signup button').addEventListener('click', (e) => {
+            e.preventDefault();
+            const email = document.querySelector('.newsletter-signup input').value;
+            if (email) {
+                alert('Thank you for subscribing to our newsletter!');
+                document.querySelector('.newsletter-signup input').value = '';
+            }
         });
     </script>
 </body>
