@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,193 +8,163 @@
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://sardainfotech.com">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    
-    <!-- Schema Markup -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Sarda Infotech",
-        "url": "https://sardainfotech.com",
-        "logo": "https://sardainfotech.com/logo.png",
-        "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "+91-98765-43210",
-            "contactType": "customer service"
-        },
-        "address": {
-            "@type": "PostalAddress",
-            "addressCountry": "IN",
-            "addressLocality": "Mumbai"
-        },
-        "sameAs": [
-            "https://facebook.com/sardainfotech",
-            "https://linkedin.com/company/sardainfotech"
-        ]
-    }
-    </script>
-
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            overflow-x: hidden;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Header */
-        header {
-            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
-            color: white;
-            padding: 1rem 0;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.8rem;
-            font-weight: bold;
-            background: linear-gradient(45deg, #f39c12, #e74c3c);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            transition: color 0.3s;
-            font-weight: 500;
-        }
-
-        .nav-links a:hover {
-            color: #f39c12;
-        }
-
-        .mobile-menu {
-            display: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-        }
-
-        .cta-btn {
-            background: linear-gradient(45deg, #e74c3c, #c0392b);
-            color: white;
-            padding: 12px 25px;
-            border: none;
-            border-radius: 25px;
-            cursor: pointer;
-            transition: all 0.3s;
-            font-weight: 600;
-            text-decoration: none;
-            display: inline-block;
-        }
-
-        .cta-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(231, 76, 60, 0.4);
-        }
-
-        <h1>Sarda Infotech</h1>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+        header, footer { background: #2c3e50; color: white; padding: 20px; text-align: center; }
+        nav ul { list-style: none; display: flex; justify-content: center; padding: 0; }
+        nav ul li { margin: 0 15px; }
+        nav ul li a { color: white; text-decoration: none; font-weight: bold; }
+        .hero { background: linear-gradient(135deg, #3498db, #2c3e50); color: white; padding: 100px 20px; text-align: center; }
+        .section-title { text-align: center; font-size: 2.5rem; margin: 40px 0 20px; color: #2c3e50; }
+        .services-grid, .footer-content { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
+        .service-card { background: #ecf0f1; padding: 20px; border-radius: 10px; width: 300px; text-align: center; }
+        .service-card i { font-size: 2rem; color: #f39c12; margin-bottom: 10px; }
+        .learn-more-btn { background: #e74c3c; color: white; padding: 10px 20px; border-radius: 25px; display: inline-block; text-decoration: none; margin-top: 10px; }
+        .learn-more-btn:hover { background: #c0392b; }
+        footer .footer-content div { width: 200px; }
+        .social-links a { margin: 0 10px; color: #bdc3c7; font-size: 1.5rem; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Sarda Infotech</div>
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#blog">Blog</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="home">
-        <h2>Welcome to Sarda Infotech</h2>
-        <p>Your digital growth partner for SEO, PPC, Social Media, Content & Web Development.</p>
-        <a href="#contact" class="cta-btn">Get Free Consultation</a>
+    <section class="hero" id="home">
+        <h1>Smart Digital Growth Solutions</h1>
+        <p>We help your business grow online with expert SEO, PPC, Social Media, and Web Development services.</p>
     </section>
 
-    <section id="about" class="about">
-        <h2>About Us</h2>
-        <p><strong>Our Story:</strong> Helping businesses grow online through smart digital strategies.</p>
-        <p><strong>Our Mission:</strong> Digital success through innovation & result-driven strategies.</p>
-        <p><strong>Our Team:</strong> Experts in SEO, PPC, Social, Content & Development.</p>
-    </section>
-
-    <section id="services" class="services">
-        <h2>Our Services</h2>
-        <div class="grid">
-            <div class="card"><h3>SEO</h3><p>Rank higher and get organic leads with advanced SEO tactics.</p></div>
-            <div class="card"><h3>PPC</h3><p>Strategic paid advertising on Google, Facebook, and more.</p></div>
-            <div class="card"><h3>Social Media</h3><p>Grow your brand and engage customers on social platforms.</p></div>
-            <div class="card"><h3>Content Marketing</h3><p>Informative & converting content tailored to your audience.</p></div>
-            <div class="card"><h3>Email Marketing</h3><p>Automated campaigns that boost customer retention.</p></div>
-            <div class="card"><h3>Web Development</h3><p>Fast, responsive websites optimized for growth.</p></div>
-            <div class="card"><h3>Brand Strategy</h3><p>Build a powerful, unique identity for your business.</p></div>
+    <section id="services">
+        <h2 class="section-title">Our Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fas fa-search"></i>
+                <h3>SEO</h3>
+                <p>Improve your search engine rankings and organic traffic.</p>
+                <a href="#contact" class="learn-more-btn">Learn More</a>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-ad"></i>
+                <h3>PPC</h3>
+                <p>Run effective paid ad campaigns across platforms.</p>
+                <a href="#contact" class="learn-more-btn">Learn More</a>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-share-alt"></i>
+                <h3>Social Media</h3>
+                <p>Boost your brand with creative social media strategies.</p>
+                <a href="#contact" class="learn-more-btn">Learn More</a>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-code"></i>
+                <h3>Web Development</h3>
+                <p>Design and build fast, responsive websites that convert.</p>
+                <a href="#contact" class="learn-more-btn">Learn More</a>
+            </div>
         </div>
     </section>
 
-    <section id="portfolio" class="portfolio">
-        <h2>Portfolio</h2>
-        <div class="grid">
-            <div class="card"><h3>E-commerce Growth</h3><p>+150% traffic, 3X ROI for an online store.</p></div>
-            <div class="card"><h3>Local Business Boost</h3><p>400% more leads for a local restaurant chain.</p></div>
+ <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Sarda Infotech</h3>
+                    <p>Your trusted partner for digital marketing success. We help businesses grow with precision, passion, and performance.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#services">SEO</a></li>
+                        <li><a href="#services">Google Ads</a></li>
+                        <li><a href="#services">Social Media Marketing</a></li>
+                        <li><a href="#services">Website Development</a></li>
+                        <li><a href="#services">Content Creation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-envelope"></i> info@sardainfotech.com</p>
+                    <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Mumbai, India</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Sarda Infotech. All rights reserved.</p>
+            </div>
         </div>
-    </section>
+    </footer>
 
-    <section id="blog" class="blog">
-        <h2>Blog</h2>
-        <div class="grid">
-            <div class="card"><h3>Why SEO Still Matters</h3><p>Understand why SEO remains a top digital channel in 2025.</p></div>
-            <div class="card"><h3>Top PPC Trends</h3><p>Stay ahead with these PPC strategies for growth.</p></div>
-        </div>
-    </section>
+    <script>
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
 
-    <section id="contact" class="contact">
-        <h2>Contact Us</h2>
-        <div>
-            <p>Email: info@sardainfotech.com</p>
-            <p>Phone: +91-98765-43210</p>
-            <a href="https://wa.me/919876543210" class="whatsapp-btn">WhatsApp Us</a>
-        </div>
-        <form>
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" required></textarea>
-            <button type="submit" class="cta-btn">Send Message</button>
-        </form>
-    </section>
+        // Fade In Animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
 
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // FAQ Toggle
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const faqItem = question.parentElement;
+                const isActive = faqItem.classList.contains('active');
+                
+                // Close all FAQ items
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('active');
+                });
     <footer>
-        <p>&copy; 2025 Sarda Infotech. All rights reserved.</p>
-        <p><a href="#privacy" style="color:white;">Privacy Policy</a> | <a href="#terms" style="color:white;">Terms of Service</a></p>
+        <div class="footer-content">
+            <div>
+                <h4>Company</h4>
+                <p>Sarda Infotech<br>Smart Digital Growth</p>
+            </div>
+            <div>
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <p>&copy; 2025 Sarda Infotech. All Rights Reserved.</p>
     </footer>
 </body>
 </html>
