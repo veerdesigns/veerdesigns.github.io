@@ -3,8 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sarda Infotech - Top Digital Marketing Agency</title>
+    <title>Sarda Infotech - Smart Digital Growth Solutions</title>
+    <meta name="description" content="Sarda Infotech helps businesses grow online through smart digital marketing strategies. Get SEO, PPC, Social Media, and Web Development services.">
+    <meta name="keywords" content="digital marketing, SEO, PPC, social media marketing, web development, Sarda Infotech">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://sardainfotech.com">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Sarda Infotech",
+        "url": "https://sardainfotech.com",
+        "logo": "https://sardainfotech.com/logo.png",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+91-98765-43210",
+            "contactType": "customer service"
+        },
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "IN",
+            "addressLocality": "Mumbai"
+        },
+        "sameAs": [
+            "https://facebook.com/sardainfotech",
+            "https://linkedin.com/company/sardainfotech"
+        ]
+    }
+    </script>
+
     <style>
         * {
             margin: 0;
@@ -13,7 +43,7 @@
         }
 
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: #333;
             overflow-x: hidden;
@@ -27,7 +57,7 @@
 
         /* Header */
         header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
             color: white;
             padding: 1rem 0;
             position: fixed;
@@ -35,6 +65,7 @@
             top: 0;
             z-index: 1000;
             backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
         }
 
         nav {
@@ -46,7 +77,7 @@
         .logo {
             font-size: 1.8rem;
             font-weight: bold;
-            background: linear-gradient(45deg, #ffd700, #ffed4a);
+            background: linear-gradient(45deg, #f39c12, #e74c3c);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -61,29 +92,40 @@
             color: white;
             text-decoration: none;
             transition: color 0.3s;
+            font-weight: 500;
         }
 
         .nav-links a:hover {
-            color: #ffd700;
+            color: #f39c12;
+        }
+
+        .mobile-menu {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
         }
 
         .cta-btn {
-            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            background: linear-gradient(45deg, #e74c3c, #c0392b);
             color: white;
-            padding: 10px 20px;
+            padding: 12px 25px;
             border: none;
             border-radius: 25px;
             cursor: pointer;
-            transition: transform 0.3s;
+            transition: all 0.3s;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
         }
 
         .cta-btn:hover {
             transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(231, 76, 60, 0.4);
         }
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
             color: white;
             padding: 120px 0 80px;
             text-align: center;
@@ -109,42 +151,49 @@
 
         .hero h1 {
             font-size: 3.5rem;
-            margin-bottom: 1rem;
-            background: linear-gradient(45deg, #ffd700, #ffed4a);
+            margin-bottom: 1.5rem;
+            background: linear-gradient(45deg, #f39c12, #e74c3c);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             animation: fadeInUp 1s ease-out;
         }
 
         .hero p {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             margin-bottom: 2rem;
             opacity: 0.9;
             animation: fadeInUp 1s ease-out 0.2s both;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
-        .founder-section {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 2rem;
-            border-radius: 15px;
-            margin: 2rem auto;
-            max-width: 600px;
-            backdrop-filter: blur(10px);
+        .hero-cta {
             animation: fadeInUp 1s ease-out 0.4s both;
         }
 
-        .founder-avatar {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            background: linear-gradient(45deg, #ffd700, #ffed4a);
-            margin: 0 auto 1rem;
+        .hero-stats {
             display: flex;
-            align-items: center;
             justify-content: center;
-            font-size: 2rem;
+            gap: 3rem;
+            margin-top: 3rem;
+            animation: fadeInUp 1s ease-out 0.6s both;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
             font-weight: bold;
-            color: #333;
+            color: #f39c12;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            opacity: 0.8;
         }
 
         @keyframes fadeInUp {
@@ -173,35 +222,69 @@
 
         .about-text h2 {
             font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: #333;
+            margin-bottom: 1.5rem;
+            color: #2c3e50;
         }
 
         .about-text p {
             font-size: 1.1rem;
             margin-bottom: 1.5rem;
             line-height: 1.8;
+            color: #555;
         }
 
-        .stats {
+        .mission-vision {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .mission-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-left: 4px solid #3498db;
+        }
+
+        .mission-item h3 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        .team-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 2rem;
             margin-top: 2rem;
         }
 
-        .stat-item {
-            text-align: center;
-            padding: 1.5rem;
+        .team-card {
             background: white;
+            padding: 2rem;
             border-radius: 10px;
+            text-align: center;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
         }
 
-        .stat-number {
-            font-size: 2.5rem;
+        .team-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .team-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #3498db, #2c3e50);
+            margin: 0 auto 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: white;
             font-weight: bold;
-            color: #667eea;
         }
 
         /* Services Section */
@@ -214,33 +297,51 @@
             text-align: center;
             font-size: 2.5rem;
             margin-bottom: 3rem;
-            color: #333;
+            color: #2c3e50;
         }
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 2rem;
         }
 
         .service-card {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #3498db 0%, #2c3e50 100%);
             color: white;
-            padding: 2rem;
+            padding: 2.5rem;
             border-radius: 15px;
             text-align: center;
-            transition: transform 0.3s, box-shadow 0.3s;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(255,255,255,0.1), transparent);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .service-card:hover::before {
+            opacity: 1;
         }
 
         .service-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(102, 126, 234, 0.3);
+            box-shadow: 0 20px 40px rgba(52, 152, 219, 0.3);
         }
 
         .service-icon {
             font-size: 3rem;
-            margin-bottom: 1rem;
-            color: #ffd700;
+            margin-bottom: 1.5rem;
+            color: #f39c12;
         }
 
         .service-card h3 {
@@ -248,112 +349,177 @@
             margin-bottom: 1rem;
         }
 
-        /* Certifications */
-        .certifications {
-            padding: 60px 0;
-            background: #f8f9fa;
-            text-align: center;
+        .service-card p {
+            opacity: 0.9;
+            line-height: 1.6;
         }
 
-        .cert-grid {
+        /* Portfolio Section */
+        .portfolio {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+
+        .portfolio-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
             margin-top: 2rem;
         }
 
-        .cert-item {
+        .portfolio-item {
             background: white;
-            padding: 1.5rem;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             transition: transform 0.3s;
         }
 
-        .cert-item:hover {
+        .portfolio-item:hover {
             transform: translateY(-5px);
         }
 
-        .cert-icon {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-            color: #667eea;
+        .portfolio-image {
+            height: 200px;
+            background: linear-gradient(45deg, #3498db, #2c3e50);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: white;
         }
 
-        /* Industries */
-        .industries {
+        .portfolio-content {
+            padding: 2rem;
+        }
+
+        .portfolio-stats {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 1rem;
+        }
+
+        .portfolio-stat {
+            text-align: center;
+        }
+
+        .portfolio-stat-number {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #e74c3c;
+        }
+
+        /* Blog Section */
+        .blog {
             padding: 80px 0;
             background: white;
         }
 
-        .industry-grid {
+        .blog-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
             margin-top: 2rem;
         }
 
-        .industry-item {
-            text-align: center;
-            padding: 2rem;
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-            color: white;
+        .blog-card {
+            background: white;
             border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             transition: transform 0.3s;
         }
 
-        .industry-item:hover {
-            transform: scale(1.05);
+        .blog-card:hover {
+            transform: translateY(-5px);
         }
 
-        .industry-icon {
+        .blog-image {
+            height: 200px;
+            background: linear-gradient(45deg, #f39c12, #e74c3c);
+            display: flex;
+            align-items: center;
+            justify-content: center;
             font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        /* CTA Section */
-        .cta-section {
-            padding: 80px 0;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            text-align: center;
         }
 
-        .cta-content h2 {
-            font-size: 3rem;
+        .blog-content {
+            padding: 2rem;
+        }
+
+        .blog-meta {
+            color: #666;
+            font-size: 0.9rem;
             margin-bottom: 1rem;
-            background: linear-gradient(45deg, #ffd700, #ffed4a);
+        }
+
+        .blog-title {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+        }
+
+        .read-more {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .read-more:hover {
+            color: #2c3e50;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+            color: white;
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .contact-info h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(45deg, #f39c12, #e74c3c);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
-        .cta-content p {
-            font-size: 1.2rem;
+        .contact-info p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .contact-details {
             margin-bottom: 2rem;
         }
 
-        .cta-large {
-            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
-            color: white;
-            padding: 15px 40px;
-            border: none;
-            border-radius: 30px;
-            font-size: 1.2rem;
-            cursor: pointer;
-            transition: transform 0.3s;
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
         }
 
-        .cta-large:hover {
-            transform: translateY(-3px);
+        .contact-item i {
+            margin-right: 1rem;
+            color: #f39c12;
+            width: 20px;
         }
 
-        /* Contact Form */
         .contact-form {
             background: rgba(255, 255, 255, 0.1);
-            padding: 3rem;
+            padding: 2.5rem;
             border-radius: 15px;
-            max-width: 600px;
-            margin: 3rem auto 0;
             backdrop-filter: blur(10px);
         }
 
@@ -361,14 +527,27 @@
             margin-bottom: 1.5rem;
         }
 
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
         .form-group input,
         .form-group textarea {
             width: 100%;
-            padding: 12px;
+            padding: 12px 15px;
             border: none;
             border-radius: 8px;
             background: rgba(255, 255, 255, 0.9);
             font-size: 1rem;
+            transition: all 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(243, 156, 18, 0.3);
         }
 
         .form-group textarea {
@@ -376,40 +555,66 @@
             resize: vertical;
         }
 
-        /* FAQ Section */
-        .faq {
-            padding: 80px 0;
-            background: #f8f9fa;
-        }
-
-        .faq-item {
-            background: white;
-            margin-bottom: 1rem;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-
-        .faq-question {
-            padding: 1.5rem;
+        .whatsapp-btn {
+            background: #25d366;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 25px;
             cursor: pointer;
-            font-weight: bold;
+            font-weight: 600;
+            margin-top: 1rem;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .whatsapp-btn:hover {
+            background: #128c7e;
+            transform: translateY(-2px);
+        }
+
+        /* Newsletter */
+        .newsletter {
+            background: #f39c12;
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .newsletter-form {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
+            max-width: 500px;
+            margin: 2rem auto 0;
+            gap: 1rem;
         }
 
-        .faq-answer {
-            padding: 0 1.5rem 1.5rem;
-            display: none;
+        .newsletter-form input {
+            flex: 1;
+            padding: 12px 15px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
         }
 
-        .faq-item.active .faq-answer {
-            display: block;
+        .newsletter-form button {
+            background: #e74c3c;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .newsletter-form button:hover {
+            background: #c0392b;
         }
 
         /* Footer */
         footer {
-            background: #333;
+            background: #2c3e50;
             color: white;
             padding: 3rem 0 1rem;
         }
@@ -423,7 +628,7 @@
 
         .footer-section h3 {
             margin-bottom: 1rem;
-            color: #ffd700;
+            color: #f39c12;
         }
 
         .footer-section ul {
@@ -435,48 +640,36 @@
         }
 
         .footer-section ul li a {
-            color: #ccc;
+            color: #bdc3c7;
             text-decoration: none;
             transition: color 0.3s;
         }
 
         .footer-section ul li a:hover {
-            color: #ffd700;
+            color: #f39c12;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            color: #bdc3c7;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #f39c12;
         }
 
         .footer-bottom {
             text-align: center;
             padding-top: 2rem;
-            border-top: 1px solid #555;
-            color: #ccc;
-        }
-
-        /* Mobile Responsive */
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .about-content {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
-            .stats {
-                grid-template-columns: 1fr;
-            }
-
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .cta-content h2 {
-                font-size: 2rem;
-            }
+            border-top: 1px solid #34495e;
+            color: #bdc3c7;
         }
 
         /* Animations */
@@ -491,7 +684,6 @@
             transform: translateY(0);
         }
 
-        /* Floating Elements */
         .floating {
             animation: floating 3s ease-in-out infinite;
         }
@@ -499,6 +691,82 @@
         @keyframes floating {
             0%, 100% { transform: translateY(0px); }
             50% { transform: translateY(-20px); }
+        }
+
+        /* Live Chat Widget */
+        .chat-widget {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #3498db;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(52, 152, 219, 0.3);
+            z-index: 1000;
+            transition: all 0.3s;
+        }
+
+        .chat-widget:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 25px rgba(52, 152, 219, 0.4);
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-stats {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .about-content,
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+
+            .mission-vision,
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .services-grid,
+            .portfolio-grid,
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .newsletter-form {
+                flex-direction: column;
+            }
+
+            .container {
+                padding: 0 15px;
+            }
+        }
+
+        /* Loading Animation */
+        .loading {
+            opacity: 0;
+            animation: loading 0.8s ease-out forwards;
+        }
+
+        @keyframes loading {
+            to {
+                opacity: 1;
+            }
         }
     </style>
 </head>
@@ -511,9 +779,14 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#blog">Blog</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <button class="cta-btn">Get Started</button>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+            <a href="#contact" class="cta-btn">Get Free Consultation</a>
         </nav>
     </header>
 
@@ -521,17 +794,25 @@
     <section id="home" class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1>Top-Rated Digital Marketing Agency Delivering Global Growth with Precision & Performance</h1>
-                <p>Precision, Passion, and Performance — Digital Marketing Crafted with Unmatched Attention by Sarda Infotech</p>
-                
-                <div class="founder-section">
-                    <div class="founder-avatar">SI</div>
-                    <h3>SARDA INFOTECH TEAM</h3>
-                    <p>Leading Digital Marketing Experts</p>
-                    <p>Get a 1 Hour One on One Session with Our Experts and Boost your Business</p>
+                <h1>Sarda Infotech – Smart Digital Growth Solutions</h1>
+                <p>Transform your business with strategic digital marketing that drives real results. We combine innovation with proven strategies to accelerate your growth.</p>
+                <div class="hero-cta">
+                    <a href="#contact" class="cta-btn">Get Free Consultation</a>
                 </div>
-
-                <button class="cta-large">Get Real ROI and Scalable Growth with Sarda Infotech</button>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">150+</span>
+                        <span class="stat-label">Happy Clients</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">300%</span>
+                        <span class="stat-label">Avg ROI</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">5+</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -541,23 +822,38 @@
         <div class="container">
             <div class="about-content">
                 <div class="about-text fade-in">
-                    <h2>Leading Digital Marketing Agency in India Serving Worldwide</h2>
-                    <p>Welcome to Sarda Infotech — a cutting-edge digital marketing powerhouse with a proven track record of managing multi-million dollar ad budgets and scaling over 100+ brands across the globe. We leverage deep market understanding, AI-powered tools, and performance-driven strategies to deliver outstanding ROI.</p>
-                    <p>From SEO, Google and Meta Ads to social media growth, content creation, and high-performance websites, we specialize in building powerful digital ecosystems tailored to drive leads, conversions, and long-term brand impact.</p>
-                    <p>At Sarda Infotech, we believe in combining creativity with data and technology to craft marketing solutions that truly move the needle. Our approach is rooted in transparency, speed, and measurable outcomes.</p>
+                    <h2>About Sarda Infotech</h2>
+                    <p><strong>Our Story:</strong> We help businesses grow online through strategic digital marketing solutions. Founded with a vision to bridge the gap between traditional businesses and digital success.</p>
+                    <p><strong>Our Mission:</strong> Digital success through strategy + innovation. We believe every business deserves to thrive in the digital landscape with the right tools and expertise.</p>
+                    <p><strong>Our Team:</strong> Experts in marketing, design & technology working together to deliver exceptional results for our clients.</p>
                 </div>
-                <div class="stats fade-in">
-                    <div class="stat-item floating">
-                        <div class="stat-number">100+</div>
-                        <p>Brands Scaled</p>
+                <div class="fade-in">
+                    <div class="mission-vision">
+                        <div class="mission-item">
+                            <h3><i class="fas fa-target"></i> Our Mission</h3>
+                            <p>To empower businesses with cutting-edge digital marketing strategies that drive measurable growth and sustainable success.</p>
+                        </div>
+                        <div class="mission-item">
+                            <h3><i class="fas fa-eye"></i> Our Vision</h3>
+                            <p>To be the leading digital growth partner for businesses seeking innovative solutions and exceptional results.</p>
+                        </div>
                     </div>
-                    <div class="stat-item floating">
-                        <div class="stat-number">500%</div>
-                        <p>ROAS Achieved</p>
-                    </div>
-                    <div class="stat-item floating">
-                        <div class="stat-number">10+</div>
-                        <p>Years Experience</p>
+                    <div class="team-grid">
+                        <div class="team-card">
+                            <div class="team-avatar">SM</div>
+                            <h4>Marketing Experts</h4>
+                            <p>Certified professionals in digital marketing</p>
+                        </div>
+                        <div class="team-card">
+                            <div class="team-avatar">TD</div>
+                            <h4>Design Team</h4>
+                            <p>Creative minds crafting compelling visuals</p>
+                        </div>
+                        <div class="team-card">
+                            <div class="team-avatar">DT</div>
+                            <h4>Tech Specialists</h4>
+                            <p>Developers building robust digital solutions</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -567,278 +863,92 @@
     <!-- Services Section -->
     <section id="services" class="services">
         <div class="container">
-            <h2 class="section-title fade-in">Our Digital Marketing Services</h2>
+            <h2 class="section-title fade-in">Our Services</h2>
             <div class="services-grid">
                 <div class="service-card fade-in">
                     <div class="service-icon"><i class="fas fa-search"></i></div>
-                    <h3>Search Engine Optimization</h3>
-                    <p>Boost your organic visibility and drive quality traffic with our proven SEO strategies</p>
+                    <h3>SEO</h3>
+                    <p>Rank higher, get organic leads. Comprehensive SEO strategies that improve your search visibility and drive quality traffic to your website.</p>
                 </div>
                 <div class="service-card fade-in">
                     <div class="service-icon"><i class="fas fa-ad"></i></div>
-                    <h3>Google & Meta Ads</h3>
-                    <p>Maximize your ROI with data-driven PPC campaigns across Google and Facebook platforms</p>
+                    <h3>PPC</h3>
+                    <p>Paid ads that convert. Strategic PPC campaigns across Google, Facebook, and other platforms to maximize your advertising ROI.</p>
                 </div>
                 <div class="service-card fade-in">
                     <div class="service-icon"><i class="fas fa-share-alt"></i></div>
-                    <h3>Social Media Marketing</h3>
-                    <p>Build your brand presence and engage your audience across all social platforms</p>
-                </div>
-                <div class="service-card fade-in">
-                    <div class="service-icon"><i class="fas fa-globe"></i></div>
-                    <h3>Website Development</h3>
-                    <p>Create high-converting websites and landing pages optimized for performance</p>
-                </div>
-                <div class="service-card fade-in">
-                    <div class="service-icon"><i class="fas fa-chart-line"></i></div>
-                    <h3>Performance Marketing</h3>
-                    <p>Drive measurable results with our performance-based marketing strategies</p>
+                    <h3>Social Media</h3>
+                    <p>Build & engage your audience. Create compelling social media presence that drives engagement and builds brand loyalty.</p>
                 </div>
                 <div class="service-card fade-in">
                     <div class="service-icon"><i class="fas fa-edit"></i></div>
-                    <h3>Content Creation</h3>
-                    <p>Engage your audience with compelling content that converts and builds trust</p>
+                    <h3>Content</h3>
+                    <p>Write. Rank. Convert. High-quality content creation that resonates with your audience and drives conversions.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon"><i class="fas fa-envelope"></i></div>
+                    <h3>Email</h3>
+                    <p>Send. Track. Sell. Automated email marketing campaigns that nurture leads and boost customer retention.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon"><i class="fas fa-code"></i></div>
+                    <h3>Web Dev</h3>
+                    <p>Fast, responsive websites. Modern web development that delivers exceptional user experiences and converts visitors.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon"><i class="fas fa-palette"></i></div>
+                    <h3>Brand Strategy</h3>
+                    <p>Build your brand identity. Comprehensive branding solutions that establish your unique market position.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Certifications -->
-    <section class="certifications">
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
         <div class="container">
-            <h2 class="section-title fade-in">Proudly Certified</h2>
-            <div class="cert-grid">
-                <div class="cert-item fade-in">
-                    <div class="cert-icon"><i class="fab fa-google"></i></div>
-                    <p>Google Ads</p>
-                </div>
-                <div class="cert-item fade-in">
-                    <div class="cert-icon"><i class="fab fa-facebook"></i></div>
-                    <p>Meta Business</p>
-                </div>
-                <div class="cert-item fade-in">
-                    <div class="cert-icon"><i class="fab fa-linkedin"></i></div>
-                    <p>LinkedIn</p>
-                </div>
-                <div class="cert-item fade-in">
-                    <div class="cert-icon"><i class="fab fa-youtube"></i></div>
-                    <p>YouTube Ads</p>
-                </div>
-                <div class="cert-item fade-in">
-                    <div class="cert-icon"><i class="fab fa-shopify"></i></div>
-                    <p>Shopify</p>
-                </div>
-                <div class="cert-item fade-in">
-                    <div class="cert-icon"><i class="fab fa-wordpress"></i></div>
-                    <p>WordPress</p>
-                </div>
-                <div class="cert-item fade-in">
-                    <div class="cert-icon"><i class="fab fa-aws"></i></div>
-                    <p>AWS</p>
-                </div>
-                <div class="cert-item fade-in">
-                    <div class="cert-icon"><i class="fab fa-microsoft"></i></div>
-                    <p>Azure</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Industries -->
-    <section class="industries">
-        <div class="container">
-            <h2 class="section-title fade-in">Industries We Have Worked With</h2>
-            <div class="industry-grid">
-                <div class="industry-item fade-in">
-                    <div class="industry-icon"><i class="fas fa-home"></i></div>
-                    <h3>Real Estate</h3>
-                </div>
-                <div class="industry-item fade-in">
-                    <div class="industry-icon"><i class="fas fa-shopping-cart"></i></div>
-                    <h3>E-commerce</h3>
-                </div>
-                <div class="industry-item fade-in">
-                    <div class="industry-icon"><i class="fas fa-heart"></i></div>
-                    <h3>Healthcare</h3>
-                </div>
-                <div class="industry-item fade-in">
-                    <div class="industry-icon"><i class="fas fa-graduation-cap"></i></div>
-                    <h3>Education</h3>
-                </div>
-                <div class="industry-item fade-in">
-                    <div class="industry-icon"><i class="fas fa-utensils"></i></div>
-                    <h3>Restaurants</h3>
-                </div>
-                <div class="industry-item fade-in">
-                    <div class="industry-icon"><i class="fas fa-dumbbell"></i></div>
-                    <h3>Fitness</h3>
-                </div>
-                <div class="industry-item fade-in">
-                    <div class="industry-icon"><i class="fas fa-tshirt"></i></div>
-                    <h3>Fashion</h3>
-                </div>
-                <div class="industry-item fade-in">
-                    <div class="industry-icon"><i class="fas fa-plane"></i></div>
-                    <h3>Tourism</h3>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="container">
-            <div class="cta-content fade-in">
-                <h2>Scale Fast. Grow Big. Maximize Your Revenue Now</h2>
-                <p>"3X ROAS in 30 Days – Real Results, Real Fast"</p>
-                <p>Our strategies are built to scale your return, not your budget.</p>
-                <button class="cta-large">Start Your Growth Journey</button>
-            </div>
-
-            <div class="contact-form fade-in">
-                <h3>Fill The Form To Connect With Us</h3>
-                <p>Fill out the form below, and our team will connect with you instantly to put you on the fast track to success.</p>
-                <form>
-                    <div class="form-group">
-                        <input type="text" placeholder="Your Name" required>
+            <h2 class="section-title fade-in">Portfolio</h2>
+            <p class="fade-in" style="text-align: center; font-size: 1.2rem; margin-bottom: 3rem;">Work that delivered real results 📈</p>
+            <div class="portfolio-grid">
+                <div class="portfolio-item fade-in">
+                    <div class="portfolio-image">
+                        <i class="fas fa-chart-line"></i>
                     </div>
-                    <div class="form-group">
-                        <input type="email" placeholder="Your Email" required>
+                    <div class="portfolio-content">
+                        <h3>E-commerce Growth</h3>
+                        <p>Complete digital transformation for online retail business</p>
+                        <div class="portfolio-stats">
+                            <div class="portfolio-stat">
+                                <span class="portfolio-stat-number">3X</span>
+                                <span>ROI</span>
+                            </div>
+                            <div class="portfolio-stat">
+                                <span class="portfolio-stat-number">+150%</span>
+                                <span>Traffic</span>
+                            </div>
+                            <div class="portfolio-stat">
+                                <span class="portfolio-stat-number">250%</span>
+                                <span>Conversion</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <input type="tel" placeholder="Your Phone" required>
+                </div>
+                <div class="portfolio-item fade-in">
+                    <div class="portfolio-image">
+                        <i class="fas fa-bullhorn"></i>
                     </div>
-                    <div class="form-group">
-                        <input type="text" placeholder="Your Business" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea placeholder="Tell us about your project..."></textarea>
-                    </div>
-                    <button type="submit" class="cta-large">Get Started Today</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section class="faq">
-        <div class="container">
-            <h2 class="section-title fade-in">Frequently Asked Questions</h2>
-            <div class="faq-item fade-in">
-                <div class="faq-question">
-                    <span>What services does Sarda Infotech offer?</span>
-                    <i class="fas fa-chevron-down"></i>
-                </div>
-                <div class="faq-answer">
-                    <p>Sarda Infotech is a full-service digital marketing agency. We offer social media marketing, SEO, Google and Facebook Ads, website and landing page development, performance marketing, content creation, influencer marketing consulting, and brand strategy.</p>
-                </div>
-            </div>
-            <div class="faq-item fade-in">
-                <div class="faq-question">
-                    <span>How long does it take to see results?</span>
-                    <i class="fas fa-chevron-down"></i>
-                </div>
-                <div class="faq-answer">
-                    <p>Some results like social media engagement or ad reach are visible within weeks. SEO, branding, and long-term lead nurturing may take 2–3 months to show strong traction. We work with both short-term and long-term goals in mind.</p>
-                </div>
-            </div>
-            <div class="faq-item fade-in">
-                <div class="faq-question">
-                    <span>What platforms do you work with?</span>
-                    <i class="fas fa-chevron-down"></i>
-                </div>
-                <div class="faq-answer">
-                    <p>We manage campaigns across Facebook, Instagram, Google, YouTube, LinkedIn, and WhatsApp. We also help brands build their online presence via websites, landing pages, SEO, and influencer channels.</p>
-                </div>
-            </div>
-            <div class="faq-item fade-in">
-                <div class="faq-question">
-                    <span>How do you measure success?</span>
-                    <i class="fas fa-chevron-down"></i>
-                </div>
-                <div class="faq-answer">
-                    <p>We track KPIs like ROI, conversion rate, cost-per-lead, engagement rate, organic growth, and click-through rates — and tailor these metrics based on your business goals.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Sarda Infotech</h3>
-                    <p>Your trusted partner for digital marketing success. We help businesses grow with precision, passion, and performance.</p>
-                </div>
-                <div class="footer-section">
-                    <h3>Services</h3>
-                    <ul>
-                        <li><a href="#services">SEO</a></li>
-                        <li><a href="#services">Google Ads</a></li>
-                        <li><a href="#services">Social Media Marketing</a></li>
-                        <li><a href="#services">Website Development</a></li>
-                        <li><a href="#services">Content Creation</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Company</h3>
-                    <ul>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Contact Info</h3>
-                    <p><i class="fas fa-envelope"></i> info@sardainfotech.com</p>
-                    <p><i class="fas fa-phone"></i> +91 98765 43210</p>
-                    <p><i class="fas fa-map-marker-alt"></i> Mumbai, India</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Sarda Infotech. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        // Smooth Scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        // Fade In Animation
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.fade-in').forEach(el => {
-            observer.observe(el);
-        });
-
-        // FAQ Toggle
-        document.querySelectorAll('.faq-question').forEach(question => {
-            question.addEventListener('click', () => {
-                const faqItem = question.parentElement;
-                const isActive = faqItem.classList.contains('active');
-                
-                // Close all FAQ items
-                document.querySelectorAll('.faq-item').forEach(item => {
-                    item.classList.remove('active');
-                });
+                    <div class="portfolio-content">
+                        <h3>Local Business Boost</h3>
+                        <p>Local SEO and social media campaign for restaurant chain</p>
+                        <div class="portfolio-stats">
+                            <div class="portfolio-stat">
+                                <span class="portfolio-stat-number">400%</span>
+                                <span>Leads</span>
+                            </div>
+                            <div class="portfolio-stat">
+                                <span class="portfolio-stat-number">+200%</span>
+                                <span>Visits</span>
+                            </div>
+                            <div class="portfolio-stat">
+                                <span class="portfolio-stat-number">5X</span>
+                                <span>Engagement
